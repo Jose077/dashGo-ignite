@@ -31,11 +31,11 @@ export function makeServer() {
         },
 
         seeds(server) {
-            server.createList('user', 10)
+            server.createList('user', 100)
         },
 
         routes() {
-            this.namespace = 'api'
+            this.namespace = 'api';
             this.timing = 750;
 
             this.get('/users', function (schema, request) {
@@ -58,11 +58,11 @@ export function makeServer() {
                 )
             });
 
-            this.get('/users/:id')
+            this.get('/users/:id');
             this.post('/users');
 
-            this.namespace = ''
-            this.passthrough()
+            this.namespace = '';
+            this.passthrough();
         }
     })
 
